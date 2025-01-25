@@ -40,7 +40,7 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
-export default function ProfilePage({ params }: { params: { id: any } }) {
+export default function ProfilePage({ params }: { params: { id: string } }) {
   const [userPost, setUserPost] = useState([]);
   const [name, setName] = useState("");
   const [DataBirth, setDataBirth] = useState("");

@@ -57,7 +57,7 @@ const VisuallyHiddenInput = styled("input")({
   whiteSpace: "nowrap",
   width: 1,
 });
-export default function Comments({ params }: { params: { id: any } }) {
+export default function Comments({ params }: { params: { id: string } }) {
   const dispatch = useDispatch<dispatch>();
   const router = useRouter();
 
