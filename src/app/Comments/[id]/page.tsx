@@ -29,8 +29,11 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import nookies from "nookies";
 
-// @ts-ignore
-export default function Comments({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: { id: string };
+}
+
+export default function Comments({ params }: PageProps) {
   const dispatch = useDispatch<dispatch>();
   useEffect(() => {
     if (params?.id) {
