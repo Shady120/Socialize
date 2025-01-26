@@ -197,7 +197,10 @@ export default function ProfilePage({ params }: { params: { id: string } }) {
       </Box>
 
       {/* Create Post */}
-      <Box sx={{ width: "75%", mx: "auto" }}>
+      <Box sx={{ width: {
+        xs: "100%",
+        md: "75%",
+      }, mx: "auto" }}>
         <CreatPost />
       </Box>
 
@@ -206,7 +209,10 @@ export default function ProfilePage({ params }: { params: { id: string } }) {
       {loading ? (
         <div>
           {[...Array(2)].map((_, index) => (
-            <Card key={index} sx={{ width: "70%", mx: "auto", my: "20px" }}>
+            <Card key={index} sx={{ width: {
+              xs: "100%",
+              md: "70%",
+            }, mx: "auto", my: "20px" }}>
               <CardHeader
                 avatar={
                   <Skeleton
@@ -258,7 +264,10 @@ export default function ProfilePage({ params }: { params: { id: string } }) {
             return (
               <Box
                 key={post._id}
-                sx={{ marginBottom: 2, width: "75%", mx: "auto" }}
+                sx={{ marginBottom: 2, width: {
+                  xs: "100%",
+                  md: "75%",
+                }, mx: "auto" }}
               >
                 <Card sx={{ Width: "100%", marginBlock: "20px" }}>
                   <CardHeader
