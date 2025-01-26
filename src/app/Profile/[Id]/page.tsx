@@ -43,8 +43,6 @@ const VisuallyHiddenInput = styled("input")({
 export default function ProfilePage({ params }: { params: { id: string } }) {
   const [userPost, setUserPost] = useState([]);
   const [name, setName] = useState("");
-  const [DataBirth, setDataBirth] = useState("");
-  const [gender, setGender] = useState("");
   const [photoProfileSrc, setPhotoProfileSrc] = useState("");
   const { mode } = useColorScheme();
   const [loading, setLoading] = useState(true); 
@@ -63,9 +61,7 @@ export default function ProfilePage({ params }: { params: { id: string } }) {
       .then((res) => {
         setName(res.data.user.name);
         getPosts(res.data.user._id);
-        setDataBirth(res.data.user.dateOfBirth);
         setPhotoProfileSrc(res.data.user.photo);
-        setGender(res.data.user.gender);
       })
       .catch(() => {
         toast.error("Error in fetching user data");
